@@ -1,0 +1,50 @@
+Rebbin 0.6
+----------
+
+Rebbin is an attempt to build a full featured pastebin on Ruby On Rails
+to make myself learn it and learn Ruby as well.
+
+Requirements
+------------
+
+Ruby 1.8 (developed on ruby 1.8.2 (2004-12-23) [i386-linux])
+Rails 0.12.1 (developed on rails 0.12.1)
+PostgreSQL 7.4 or Mysql 4 (developed on PostgreSQL 7.4.7)
+Highlight 2.2-10 for utf-8 support (developed on Highlight 2.2-10)
+
+Features
+--------
+
+see Features
+
+License
+-------
+
+see COPYING.txt
+
+Installation
+------------
+
+- create the db with the right config/db_schema.sql
+- tune config/database.yml accordingly
+- start the app with ruby script/server
+
+Author
+------
+
+Lawrence Oluyede <l.oluyede at gmail.com>
+
+Links
+-----
+
+Ruby http://www.ruby-lang.org
+Rails http://www.rubyonrails.com
+PostgreSQL http://www.postgresql.org
+Mysql http://www.mysql.com
+Highlight http://www.andre-simon.de/doku/highlight/highlight_en.html
+
+Contains portions of
+--------------------
+
+session lib http://raa.ruby-lang.org/project/session/
+simple_cache http://typo.leetsoft.com/trac.cgi/file/trunk/app/models/simple_cache.rb

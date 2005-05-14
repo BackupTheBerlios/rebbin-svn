@@ -1,0 +1,114 @@
+body
+{
+  margin: 0;
+  padding: 1em 1em;
+  color: #330033;
+  font-size: small;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+}
+
+h1 { font-size: 160%; }
+h2 { font-size: 130%; }
+h3 { font-size: 116%; }
+
+a
+{ 
+  color: inherit;
+}
+
+a:visited
+{ 
+  color: #996699;
+}
+
+#header
+{ 
+    border-bottom: 1px solid #cccc99;
+}
+
+#header h1
+{
+    padding: 0;
+    margin: 0;
+    color: #cccc66;
+}
+
+#footer
+{
+    padding: 0.1em 0.5em;
+    margin-top: 1em;
+    clear: both;
+    border-top: 1px solid #cccc99;
+    font-size: 77%;
+    color: #666699;
+}
+
+#content-container
+{
+    margin: 2em 0.5em;
+}
+
+#content
+{
+  margin-left: 15em;
+}
+
+
+
+#nav
+{
+    position: relative;
+    float: left;
+    width: 10em;
+}
+
+#menu, #pastes
+{
+    list-style: url('/images/pasting.gif');
+    padding: 0 0 0 18px;
+    margin-top: 0;
+    margin-left: 1px;
+}
+
+div.pastingText
+{
+  padding: 0.5em;
+  background-color: #fafafa;
+  color: #333;
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+
+
+/* archive table section */
+
+#archive
+{
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  width: 100%;
+}
+
+#elapsed { font-size: 5pt; }
+
+/* table rows */
+.even { background-color: #cccc66; }
+.odd { background-color: #ffffff; }
+
+/* end table section */
+
+/* error message */
+.notice { color: red; }
+
+/* form section */
+.form
+{ 
+  border: 1px solid #cccc66;
+  background-color: white;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+label { float: left; width: 200px; }
+.separator { clear: both; margin-bottom: 0.5em; padding-bottom: 0.5em }

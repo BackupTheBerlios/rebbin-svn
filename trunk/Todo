@@ -1,0 +1,9 @@
+TODO
+----
+
+* delete pastes in db after 24h
+* full text search
+* error messages for form validation
+* rework theme
+* admin ui (list, edit, delete) (?)
+* multiple versions (?)

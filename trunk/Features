@@ -1,0 +1,17 @@
+FEATURES
+--------
+
+Rebbin 0.6
+
+    * Syntax highlighting
+    * Export pastes as plain text
+    * Easy navigation interface
+    * Archive page with sorting capabilities
+    * Store author name in a cookie
+    * Unicode (UTF-8) support
+    * PostgreSQL and MySQL Schemas
+    * Basic unit and functional testing
+    * Markup is XHTML 1.0 transitional valid
+    * Global in-memory cache
+    * Text wordwrap
+

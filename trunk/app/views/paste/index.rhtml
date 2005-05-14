@@ -1,0 +1,25 @@
+<div>
+  <form action="/paste/create" method="post">
+    <fieldset class="form">
+      <legend>Add paste</legend>
+      <label>Author (optional)</label>
+      <span><%= text_field_tag "author", "", :size => 30, :value => @author_cookie_val %></span>
+      <div class="separator"></div>
+      <label>Language</label>
+      <span>
+        <select name="language" id="language">
+          <%= options_for_select PasteHelper.get_languages, "Ruby" %>
+        </select>
+      </span>
+      <div class="separator"></div>
+      <label>Description (optional)</label>
+      <span><%= text_field_tag "description", "", :size => 50 %></span>
+      <div class="separator"></div>
+      <label>Body</label>
+      <span><%= text_area_tag "body", "", :rows => 20, :cols => 80 %></span>
+      <div class="separator"></div>
+      <span><input type="submit" value="Add Paste" /></span>
+    </fieldset>
+  </form>
+</div>
+

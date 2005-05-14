@@ -1,0 +1,19 @@
+<div>
+  <p>
+    <%= link_to "&larr; prev", { :action => "show", :id => PasteHelper.prev_id(@paste[:id]) } %>
+    &nbsp;&bull;
+    Pasted by <%=h "#{@paste[:author]} in #{@paste[:language]} at #{@paste[:created_on]}" %>
+    &nbsp;&bull;&nbsp;
+    <%= link_to "download", { :action => "download", :id => @paste[:id] } %>
+    &nbsp;&bull;&nbsp;
+    <%= link_to "next  &rarr;", { :action => "show", :id => PasteHelper.next_id(@paste[:id]) } %>
+  </p>
+  <p><strong><%=h @paste[:description] %></strong></p>
+  <div class="pastingText">
+    <pre>
+<%= @paste[:body] %>
+    </pre>
+  </div>
+  <br />
+</div>
+

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Rebbin archive</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+    @import url('/stylesheets/default.css');
+    @import url('/stylesheets/highlight.css');
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1><a name="top">Archive</a></h1>
+  </div>
+
+  <br />
+  <%= link_to "Home", { :controller => "paste", :action => "index" } %><br /><br />
+  <table id="archive">
+    <tr>
+      <th><%= link_to "Date", { :action => "sort_by_date" } %></th>
+      <th><%= link_to "Author", { :action => "sort_by_author" } %></th>
+      <th><%= link_to "Language", { :action => "sort_by_language" } %></th>
+      <th><%= link_to "Description", { :action => "sort_by_description" } %></th>
+    </tr>
+    <% if @pastes.length > 0 %>
+      <% @pastes.each_with_index { |paste, index| %>
+        <% if index % 2 == 0 %>
+          <tr class="even">
+            <td><%= link_to "#{paste.created_on}", { :controller => "paste", :action => "show", :id => paste.id } %></td>
+            <td><%=h paste.author %></td>
+            <td><%=h paste.language %></td>
+            <td><%=h paste.description %></td>
+          </tr>
+        <% else %>
+          <tr class="odd">
+            <td><%= link_to "#{paste.created_on.to_s}", { :controller => "paste", :action => "show", :id => paste.id } %></td>
+            <td><%=h paste.author %></td>
+            <td><%=h paste.language %></td>
+            <td><%=h paste.description %></td>
+          </tr>
+        <% end %>
+      <% } %>
+    <% end %>
+  </table>
+  <br />
+
+  <p>&nbsp;</p><br />
+  <p>&nbsp;</p><br />
+  <a href="#top">top</a>
+  <div id="footer">
+    Developed by Lawrence Oluyede.<br />
+    Powered by <a href="http://www.rubyonrails.org">Ruby On Rails</a>.<br />
+  </div>
+</body>
+</html>

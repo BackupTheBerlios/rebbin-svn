@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+full:
+    id: 1
+    author: rhymes
+    language: Ruby
+    description: foo
+    body: def foo end
+    created_on: <%= Time.now %>
+
+unicode:
+    id: 2
+    author: rhymes
+    language: Plain Text
+    body: Iñtërnâtiônàlizætiøn
+    created_on: <%= Time.now %>

@@ -1,0 +1,76 @@
+14 May 05 - 0.6 released:
+	- lib/colouriser.rb
+	  app/views/paste/show.rhtml
+	  	use session lib (see README) instead of custom code to avoid hangs
+	- app/views/paste/index.rhtml: also author name is optional
+	- paste renders with fixed font (why the hell i was using var-width font?!)
+	- lib/colouriser.rb
+	  lib/session.rb
+		include session lib into rebbin
+	- lib/colouriser.rb: wordwrap for plain text
+	- switched to GPL license
+	- implemented global in-memory never expire cache
+	- removed timings calculation (useless)
+	- remove postgresql 'banner'
+	- fixed CSS a bit for IE
+	- checked pages against w3c validator: is xhtml 1.0 transitional valid
+	- fixed a bug in js portion of app/views/layouts/application.rhtml
+
+11 May 05:
+	- app/controller/paste_controller.b: some bugfixing
+	- lib/colouriser.rb: bufferize call to popen3
+	
+
+10 May 05:
+	- moved sql schema files into db/ dir
+	- test/unit/paste_test.rb
+	  test/fixtures/pastes.yml
+	  app/models/paste.rb:
+	  	 add unit testing for paste model
+	- test/functional/archive_controller_test.rb
+	  test/functional/paste_controller_test.rb:
+	  	 add basic functional testing
+
+07 May 05 - 0.5 released:
+	- added mysql schema
+	- BSD Licensed
+
+05 May 05:
+	- turned cookie name constant into global var
+	- fixed escaping in archive view
+	- now the archive could display itself sorted by any field
+	- display elapsed time for pastes in the index
+	- fixed routing for index page
+
+04 May 05:
+	- full unicode support (Rails rocks! :-))
+	- app/controllers/paste_controller.rb: add caching for show page
+	- now validates against xhtml1.0 transitional standard
+	- app/views/show.rhtml
+	  app/views/layout/application.rhtml:
+	  	now escapes correctly author and description
+
+03 May 05:
+	- syntax highlighting
+	- app/controllers/paste_controller.rb: fixed a typo in redirect_to after save
+	- public/images/pasting.gif
+	  public/stylesheets/default.css:
+	  	changed index list style
+	- app/controllers/paste_controller.rb
+	  app/helpers/paste_helper.rb
+	  app/views/paste/index.rhtml:
+	  	added cookie support
+	- app/controllers/archive_controller.rb
+	  app/views/archive/index.rhtml
+	  app/views/layouts/application.rhtml
+	  app/views/layouts/archive.rhtml:
+	  	add archive page
+	- moved start_timer, stop_timer from paste_helper.rb to application_helper.rb
+	- changed default form lannguage from python to ruby :-)
+
+02 May 05:
+    - added postgresql schema
+    - index of app, css, initial layout
+    - create paste, show paste
+    - download paste
+    - display timings
