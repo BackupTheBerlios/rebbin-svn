@@ -15,7 +15,10 @@
 	- app/controllers/xml_controller.rb
 	  config/routes.rb:
 	  	add caching for xml feeds
-
+	- app/views/layouts/archive.rhtml
+	  app/views/paste/show.rhtml:
+	  	show times in UTC format
+	  
 14 May 05 - 0.6 released:
 	- lib/colouriser.rb
 	  app/views/paste/show.rhtml

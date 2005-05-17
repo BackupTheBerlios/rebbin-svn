@@ -26,14 +26,14 @@
       <% @pastes.each_with_index { |paste, index| %>
         <% if index % 2 == 0 %>
           <tr class="even">
-            <td><%= link_to "#{paste.created_on}", { :controller => "paste", :action => "show", :id => paste.id } %></td>
+            <td><%= link_to "#{paste.created_on.getutc}", { :controller => "paste", :action => "show", :id => paste.id } %></td>
             <td><%=h paste.author %></td>
             <td><%=h paste.language %></td>
             <td><%=h paste.description %></td>
           </tr>
         <% else %>
           <tr class="odd">
-            <td><%= link_to "#{paste.created_on.to_s}", { :controller => "paste", :action => "show", :id => paste.id } %></td>
+            <td><%= link_to "#{paste.created_on.getutc}", { :controller => "paste", :action => "show", :id => paste.id } %></td>
             <td><%=h paste.author %></td>
             <td><%=h paste.language %></td>
             <td><%=h paste.description %></td>
