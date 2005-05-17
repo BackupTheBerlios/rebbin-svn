@@ -10,6 +10,11 @@ ActionController::Routing::Routes.draw do |map|
   # -- just remember to delete public/index.html.
   map.connect '', :controller => "paste", :action => "index"
 
+  # make rss feed urls pretty and let them end in .xml
+  # this improves caches_page because now apache and webrick will send out the 
+  # cached feeds with the correct xml mime type. 
+  map.connect 'xml/:action/feed.xml', :controller  => 'xml'
+
   # Allow downloading Web Service WSDL as a file with an extension
   # instead of a file named 'wsdl'
   #map.connect ':controller/service.wsdl', :action => 'wsdl'

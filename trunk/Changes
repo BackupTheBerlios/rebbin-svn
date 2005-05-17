@@ -12,6 +12,9 @@
 	  app/controllers/paste_controller.rb:
 	    move find_* methods to model
 	- add rss and atom feeds
+	- app/controllers/xml_controller.rb
+	  config/routes.rb:
+	  	add caching for xml feeds
 
 14 May 05 - 0.6 released:
 	- lib/colouriser.rb
