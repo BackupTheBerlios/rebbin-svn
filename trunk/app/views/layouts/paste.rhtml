@@ -37,19 +37,17 @@
         <li><%= link_to "Add paste", { :action => "index" } %></li>
       </ul>
 
-      <span>Recent pastes:</span>
-      <ul id="pastes">
-        <% if @pastes.length == 0 %>
-          <li><em>none</em></li>
-        <% else %>
+      <% if !@pastes.nil? %>
+        <span>Recent pastes:</span>
+        <ul id="pastes">
           <% for paste in @pastes %>
             <li>
               <%= link_to "#{paste.id} %s" % CGI.escapeHTML(paste.author), { :action => "show", :id => paste.id } %>
               <br />
             </li>
           <% end %>
-       <% end %>
-      </ul>
+        </ul>
+      <% end %>
 
       <div><%= link_to "List all pastes", { :controller => "archive" } %></div>
       <br/>

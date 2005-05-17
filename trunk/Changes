@@ -1,3 +1,11 @@
+18 May 05:
+	- app/views/layouts/paste.rhtml: we shouldn't display pastes list if we don't have them
+	- test/functional/paste_api_test.rb
+	  app/controllers/paste_controller.rb
+	  app/apis/paste_api.rb:
+	  	added xmlrpc and soap support, via /api or /xmlrpc
+	
+
 17 May 05:
 	- added config/database.yml.mysql for mysql users
 	- app/controller/paste_controller.rb: expire cookies early and cookies setter should be private
@@ -18,12 +26,7 @@
 	- app/views/layouts/archive.rhtml
 	  app/views/paste/show.rhtml:
 	  	show times in UTC format
-	- use pastebin_title helper instead of hardcoding the title itself
-	- test/functional/paste_api_test.rb
-	  app/controllers/paste_controller.rb
-	  app/apis/paste_api.rb:
-	  	added xmlrpc and soap support, via /api or /xmlrpc
-	
+	- use pastebin_title helper instead of hardcoding the title itself	
 	  
 14 May 05 - 0.6 released:
 	- lib/colouriser.rb
