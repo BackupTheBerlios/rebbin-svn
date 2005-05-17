@@ -19,6 +19,11 @@
 	  app/views/paste/show.rhtml:
 	  	show times in UTC format
 	- use pastebin_title helper instead of hardcoding the title itself
+	- test/functional/paste_api_test.rb
+	  app/controllers/paste_controller.rb
+	  app/apis/paste_api.rb:
+	  	added xmlrpc and soap support, via /api or /xmlrpc
+	
 	  
 14 May 05 - 0.6 released:
 	- lib/colouriser.rb

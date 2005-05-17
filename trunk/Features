@@ -4,6 +4,12 @@ FEATURES
 Rebbin 0.x
 
 	* RSS 2.0 and Atom 0.3 feeds
+	* XMLRPC and SOAP support:
+		- num_of_pastes: returns the number of pastes
+		- get_languages: returns the list of supported languages
+		- add_paste: adds a paste to the pastebin and returns the id
+		- get_paste: returns the paste with the given id
+		- get_latest_pastes: returns the latest pastes
 
 
 Rebbin 0.6

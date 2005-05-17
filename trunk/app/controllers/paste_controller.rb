@@ -2,6 +2,7 @@ $AUTHOR_COOKIE_NAME = "_rebbin_paste_author"
 
 class PasteController < ApplicationController
   helper :paste
+  web_service_scaffold :invocation
 
   def index
     @author_cookie_val = cookies[$AUTHOR_COOKIE_NAME]
@@ -55,7 +56,48 @@ class PasteController < ApplicationController
     send_data @paste.body, :type => "text/plain; charset=utf-8", :disposition => "inline"
   end
 
+  # API Section
+
+  alias xmlrpc api
+
+  def num_of_pastes
+    Paste.count
+  end
+
+  def get_languages
+    PasteHelper.get_languages
+  end
+
+  def add_paste
+    paste = Paste.new
+    paste.author = @method_params[0] == "" ? "anonymous" : @method_params[0]
+    paste.language = @method_params[1]
+    paste.description = @method_params[2]
+    paste.body = @method_params[3]
+    
+    paste.save
+    paste.id.to_s
+  end
+
+  def get_paste
+    paste = Paste.find(@method_params[0])
+    paste_to_apistruct(paste)
+  end
+
+  def get_latest_pastes
+    pastes = Paste.find_latest_pastes
+    pastes.to_a.collect { |p| paste_to_apistruct(p) }
+  end
+
   private
+
+  def paste_to_apistruct(paste)
+    PasteApiStructs::Paste.new(:author => paste.author,
+                               :language => paste.language,
+                               :description => paste.description,
+                               :body => paste.body,
+                               :created_on => paste.created_on)
+  end
 
   def set_author_cookie(author)
     name = $AUTHOR_COOKIE_NAME

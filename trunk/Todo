@@ -4,7 +4,6 @@ TODO
 * delete pastes in db after 24h
 * full text search, see also http://wiki.rubyonrails.com/rails/show/SearchGenerator
 * error messages for form validation
-* post via XMLRPC/SOAP
 * rework theme
 * admin ui (list, edit, delete) (?)
 * multiple versions (?)
