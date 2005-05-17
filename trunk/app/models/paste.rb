@@ -1,6 +1,4 @@
 class Paste < ActiveRecord::Base
-#  timestamps_gmt = true
-
   validates_presence_of :author
   validates_presence_of :language
   validates_presence_of :body
