@@ -8,4 +8,12 @@ class Paste < ActiveRecord::Base
   validates_length_of :author, :maximum => 20
   validates_length_of :language, :maximum => 20
   validates_length_of :description, :maximum => 50
+
+  def html_body
+    begin
+      Colouriser.colourise(body, $languages[language])
+    rescue
+      body
+    end
+  end
 end

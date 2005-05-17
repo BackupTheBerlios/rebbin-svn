@@ -56,6 +56,10 @@ class PasteTest < Test::Unit::TestCase
     assert @paste.valid?
   end
 
+  def test_html_body
+    assert_equal @paste.html_body[0].chomp, '<span class="line">    1 </span><span class="kwa">def</span> foo <span class="kwa">end</span>'
+  end
+
   def test_created_on
     @paste.created_on = nil
     assert @paste.valid?    # created_on is handle by rails

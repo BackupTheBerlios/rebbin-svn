@@ -14,13 +14,12 @@ class PasteController < ApplicationController
     
     if cache[paste_id].nil?
       @paste = Paste.find(paste_id)
-      @body = Colouriser.colourise(@paste.body, $languages[@paste.language])
       cache[paste_id] = {
         :id => @paste.id,
         :author => @paste.author,
         :language => @paste.language,
         :description => @paste.description,
-        :body => @body, 
+        :body => @paste.html_body, 
         :created_on => @paste.created_on
       }
     end
