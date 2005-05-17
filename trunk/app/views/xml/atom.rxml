@@ -1,7 +1,7 @@
 xml.instruct!
 xml.feed "version" => "0.3", "xml:lang"=>"en-us", "xmlns"=>"http://purl.org/atom/ns#" do
 
-  xml.title blog_title
+  xml.title pastebin_title
   xml.id "tag:#{@request.host},2005:Rebbin"
   xml.link "rel" => "alternate", "type" => "text/html", "href" => url_for(:controller => "pastes", :only_path => false)
 

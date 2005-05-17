@@ -3,7 +3,7 @@ module ApplicationHelper
     url_for :only_path => false, :controller=> "paste", :action =>"show", :id => paste.id
   end
   
-  def blog_title
+  def pastebin_title
     "Rebbin, the Rails pastebin"
   end
 end

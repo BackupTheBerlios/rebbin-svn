@@ -2,7 +2,6 @@ TODO
 ----
 
 * delete pastes in db after 24h
-* use blog_title in views
 * full text search, see also http://wiki.rubyonrails.com/rails/show/SearchGenerator
 * error messages for form validation
 * post via XMLRPC/SOAP
