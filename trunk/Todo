@@ -1,8 +1,6 @@
 TODO
 ----
 
-* extract view logic in helpers, see http://www.loudthinking.com/arc/000408.html
-* store html body in db
 * move paste findby in the model, see app/models/article.rb in typo
 * delete pastes in db after 24h
 * rss/atom feeds for pastes
@@ -15,3 +13,4 @@ TODO
 * improve sorting of archive view, see: http://wiki.rubyonrails.com/rails/show/SortHelper and http://wiki.rubyonrails.com/rails/show/SortHelper2
 * support pagination in archive view, see: http://wiki.rubyonrails.com/rails/show/PaginationHelper
 * integrate calendar helper in the app (?) http://wiki.rubyonrails.com/rails/show/CalendarHelper
+* store html body in db (?) - cause it does mean that we tie the app to the external colouriser
