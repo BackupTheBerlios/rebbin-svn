@@ -1,0 +1,21 @@
+xml.instruct!
+xml.rss "version"=>"2.0", "xmlns:dc"=>"http://purl.org/dc/elements/1.1/" do
+  xml.channel do
+    xml.title blog_title
+    xml.link url_for(:controller => "paste", :only_path => false)
+    xml.language "en-us"
+    xml.copyright "Copyright 2005 Lawrence Oluyede"
+    xml.ttl "60"
+    xml.description "Rebbin, the Rails pastebin"
+
+    for paste in @pastes
+      xml.item do
+        xml.title paste_title(paste)
+        xml.description paste_content(paste)
+        xml.pubDate pub_date(paste.created_on)
+        xml.guid paste_link(paste)
+        xml.link paste_link(paste)
+      end
+    end
+  end
+end

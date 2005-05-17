@@ -45,7 +45,8 @@ a:visited
 
 #content-container
 {
-    margin: 2em 0.5em;
+  margin: 2em 0.5em;
+  margin-bottom: 5px;
 }
 
 #content

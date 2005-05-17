@@ -1,6 +1,11 @@
 FEATURES
 --------
 
+Rebbin 0.x
+
+	* RSS 2.0 and Atom 0.3 feeds
+
+
 Rebbin 0.6
 
     * Syntax highlighting
