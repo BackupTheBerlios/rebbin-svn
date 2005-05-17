@@ -29,7 +29,7 @@ class PasteController < ApplicationController
 
   def create
     begin
-      @paste = Paste.new()
+      @paste = Paste.new
       @paste.author = @params[:author] == "" ? "anonymous" : @params[:author]
       @paste.language = @params[:language]
       @paste.description = @params[:description]
@@ -56,9 +56,10 @@ class PasteController < ApplicationController
     send_data @paste.body, :type => "text/plain; charset=utf-8", :disposition => "inline"
   end
 
+  private
+
   def set_author_cookie(author)
     name = $AUTHOR_COOKIE_NAME
-    seconds_in_a_year = 365 * 24 * 60 * 60
-    cookies[name] = { :value => author, :expires => Time.now + seconds_in_a_year }
+    cookies[name] = { :value => author, :expires => 2.weeks.from_now }
   end
 end
