@@ -2,7 +2,6 @@ $AUTHOR_COOKIE_NAME = "_rebbin_paste_author"
 
 class PasteController < ApplicationController
   helper :paste
-  web_service_scaffold :invocation
 
   def index
     @author_cookie_val = cookies[$AUTHOR_COOKIE_NAME]
