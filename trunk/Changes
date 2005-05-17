@@ -2,6 +2,7 @@
 	- added config/database.yml.mysql for mysql users
 	- app/controller/paste_controller.rb: expire cookies early and cookies setter should be private
 	- app/views/paste/show.rhtml: fix pre in show paste
+	- app/views/layouts/application.rhtml,archive.rhtml: use asset tag helper
 
 14 May 05 - 0.6 released:
 	- lib/colouriser.rb

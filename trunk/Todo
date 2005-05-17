@@ -1,7 +1,6 @@
 TODO
 ----
 
-* use http://api.rubyonrails.com/classes/ActionView/Helpers/AssetTagHelper.html in views
 * extract view logic in helpers, see http://www.loudthinking.com/arc/000408.html
 * store html body in db
 * move paste findby in the model, see app/models/article.rb in typo
