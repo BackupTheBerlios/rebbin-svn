@@ -7,6 +7,10 @@
 	  app/controllers/paste_controller.rb
 	  app/models/paste.rb:
 	  	moved colouriser from controller to model
+	- app/models/paste.rb
+	  app/controllers/archive_controller.rb
+	  app/controllers/paste_controller.rb:
+	    move find_* methods to model
 
 14 May 05 - 0.6 released:
 	- lib/colouriser.rb

@@ -1,7 +1,6 @@
 TODO
 ----
 
-* move paste findby in the model, see app/models/article.rb in typo
 * delete pastes in db after 24h
 * rss/atom feeds for pastes
 * full text search, see also http://wiki.rubyonrails.com/rails/show/SearchGenerator

@@ -5,11 +5,11 @@ class PasteController < ApplicationController
 
   def index
     @author_cookie_val = cookies[$AUTHOR_COOKIE_NAME]
-    @pastes = Paste.find(:all, :order => "created_on DESC", :limit => 20)
+    @pastes = Paste.find_latest_pastes
   end
 
   def show
-    @pastes = Paste.find(:all, :order => "created_on DESC", :limit => 20)
+    @pastes = Paste.find_latest_pastes
     paste_id = @params[:id]
     
     if cache[paste_id].nil?
