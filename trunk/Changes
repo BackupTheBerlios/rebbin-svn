@@ -1,3 +1,6 @@
+19 May 05:
+	- test/functional/paste_controller_test.rb: added test for create, routing test and some improvements
+
 18 May 05:
 	- app/views/layouts/paste.rhtml: we shouldn't display pastes list if we don't have them
 	- test/functional/paste_api_test.rb
