@@ -4,6 +4,7 @@
 	  app/controllers/paste_controller.rb
 	  app/apis/paste_api.rb:
 	  	added xmlrpc and soap support, via /api or /xmlrpc
+	- moved xml partial in the right dir
 	
 
 17 May 05:
