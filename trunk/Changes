@@ -4,6 +4,7 @@
 	  	added a scheduler that destroys pastes older than 48h, the scheduler run every 24h
 	- app/helpers/paste_helper.rb
 		must get the first_id not base the calculation on id=1
+	- lib/colouriser.rb: disable wordwrapping cause it's buggy
 
 19 May 05:
 	- test/functional/paste_controller_test.rb: added test for create, routing test and some improvements

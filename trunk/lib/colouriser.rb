@@ -19,9 +19,9 @@ module Colouriser
     return new_text
   end
 
-  def Colouriser.wordwrap(str, len)
-    str.gsub( /\n/, "\n\n" ).gsub( /(.{1,#{len}})(\s+|$)/, "\\1\n" )
-  end
+#  def Colouriser.wordwrap(str, len)
+#    str.gsub( /\n/, "\n\n" ).gsub( /(.{1,#{len}})(\s+|$)/, "\\1\n" )
+#  end
   
   def Colouriser.colourise(text, lang)
     text.map do |x|
@@ -29,7 +29,7 @@ module Colouriser
     end.join("\n")
     
     if lang == "txt"
-      text = wordwrap(text, 79)
+#      text = wordwrap(text, 79)
       text = add_line_numbers(text)
       return text
     end
