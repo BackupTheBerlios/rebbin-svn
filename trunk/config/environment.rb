@@ -69,3 +69,36 @@ Controllers = Dependencies::LoadingModule.root(
 )
 
 # Include your app's configuration here:
+require 'scheduler'
+
+# this scheduler will destroy every paste older than 24h
+class DestroyPasteScheduler < Scheduler::Scheduler
+  def schedule
+    at startup do
+      RAILS_DEFAULT_LOGGER.warn "----Destroy paste scheduler started----"      
+    end
+
+    every 1.day do
+      now = Time.now
+      ref_date = Time.local(now.year, now.month, now.day-2, 23, 59)
+      @old_pastes = Paste.find(:all, :conditions => ["created_on < ?", ref_date])
+
+      Paste.transaction do
+        @old_pastes.each { |paste|
+          id = paste.id
+          paste.destroy
+          RAILS_DEFAULT_LOGGER.warn "    Paste id: #{id} deleted!"
+        }
+      end
+    end
+
+    at shutdown do
+      RAILS_DEFAULT_LOGGER.warn "----Destroy paste scheduler finished----"      
+    end
+  end
+end
+
+Thread.new { 
+  scheduler = DestroyPasteScheduler.new
+  scheduler.start()
+}

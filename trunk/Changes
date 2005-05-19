@@ -1,3 +1,8 @@
+20 May 05:
+	- lib/scheduler.rb
+	  config/envinroment.rb:
+	  	added a scheduler that destroys pastes older than 48h, the scheduler run every 24h
+
 19 May 05:
 	- test/functional/paste_controller_test.rb: added test for create, routing test and some improvements
 

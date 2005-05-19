@@ -1,8 +1,8 @@
 TODO
 ----
 
-* delete pastes in db after 24h
-* full text search, see also http://wiki.rubyonrails.com/rails/show/SearchGenerator
+* check tests with mysql
+* add comments feature to pastes
 * error messages for form validation
 * rework theme
 * admin ui (list, edit, delete) (?)
@@ -12,3 +12,4 @@ TODO
 * support pagination in archive view, see: http://wiki.rubyonrails.com/rails/show/PaginationHelper
 * integrate calendar helper in the app (?) http://wiki.rubyonrails.com/rails/show/CalendarHelper
 * store html body in db (?) - cause it does mean that we tie the app to the external colouriser
+* dig through http://wiki.rubyonrails.com/rails/show/SecurityConcerns
