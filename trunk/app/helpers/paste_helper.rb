@@ -37,7 +37,8 @@ module PasteHelper
   end
   
   def PasteHelper.prev_id(id)
-    if id > 1
+    first_id = Paste.find(:all, :order => "id")[0].id
+    if id > first_id
       return id - 1
     else
       return id
