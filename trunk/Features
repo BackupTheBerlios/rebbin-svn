@@ -12,6 +12,7 @@ Rebbin 0.x
 		- get_latest_pastes: returns the latest pastes
 	* Scheduler to destroy pastes automatically, it destroys pastes
 		older than 48h and it runs every 24h in a separate thread
+	* Improved sorting in archive page
 
 
 Rebbin 0.6

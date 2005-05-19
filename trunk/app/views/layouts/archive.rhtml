@@ -17,10 +17,10 @@
   <%= link_to "Home", { :controller => "paste", :action => "index" } %><br /><br />
   <table id="archive">
     <tr>
-      <th><%= link_to "Date", { :action => "sort_by_date" } %></th>
-      <th><%= link_to "Author", { :action => "sort_by_author" } %></th>
-      <th><%= link_to "Language", { :action => "sort_by_language" } %></th>
-      <th><%= link_to "Description", { :action => "sort_by_description" } %></th>
+      <%= sort_header_tag("created_on", :caption => "Date") %>
+      <%= sort_header_tag("author") %>
+      <%= sort_header_tag("language") %>
+      <%= sort_header_tag("description") %>
     </tr>
     <% if @pastes.length > 0 %>
       <% @pastes.each_with_index { |paste, index| %>

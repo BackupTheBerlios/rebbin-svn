@@ -5,6 +5,14 @@
 	- app/helpers/paste_helper.rb
 		must get the first_id not base the calculation on id=1
 	- lib/colouriser.rb: disable wordwrapping cause it's buggy
+    - app/helpers/sort_helper.rb
+      app/controllers/archive_controller.rb
+      app/views/layouts/archive.rhtml
+      public/images/sort_asc.png
+      public/images/sort_desc.png:
+        removed custom sorting code in archive view and replaced with code
+        derived from this: http://wiki.rubyonrails.com/rails/show/SortHelper2
+
 
 19 May 05:
 	- test/functional/paste_controller_test.rb: added test for create, routing test and some improvements
