@@ -49,7 +49,7 @@ class PasteControllerTest < Test::Unit::TestCase
     paste = Paste.find(:all, :order => "id")[-1]
     assert paste.save
 
-    assert_redirected_to :action => "show"#, :id => paste.id
+    assert_redirected_to :action => "show"
   end
 
   def test_show_routing
