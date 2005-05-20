@@ -8,7 +8,6 @@ TODO
 * admin ui (list, edit, delete) (?)
 * multiple versions (?)
 * replace external highlighter with plain ruby code (far in the future :))
-* support pagination in archive view, see: http://wiki.rubyonrails.com/rails/show/PaginationHelper
-* integrate calendar helper in the app (?) http://wiki.rubyonrails.com/rails/show/CalendarHelper
 * store html body in db (?) - cause it does mean that we tie the app to the external colouriser
-* dig through http://wiki.rubyonrails.com/rails/show/SecurityConcerns
+
+
