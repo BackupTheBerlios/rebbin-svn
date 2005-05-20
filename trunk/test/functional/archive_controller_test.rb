@@ -18,31 +18,29 @@ class ArchiveControllerTest < Test::Unit::TestCase
     assert_template "index"
   end
 
-  def test_sort_by_author
-    get :sort_by_author
+  def test_sort_by_author_asc
+    get :index, { "sort_key" => "author", "sort_order" => "asc" }
     assert_response :success
     assert_not_nil assigns(:pastes)
+    assert_tag :tag => "img", :attributes => {:src => "/images/sort_asc.png"},  :parent => { 
+      :tag => "th", :attributes => { :title => "Sort by Author"}
+    }
+    assert_no_tag :tag => "img", :attributes => {:src => "/images/sort_asc.png"}, :parent => { 
+      :tag => "th", :attributes => { :title => "Sort by Date"}
+    }
     assert_template "index"
   end
 
-  def test_sort_by_language
-    get :sort_by_language
+  def test_sort_by_date_desc
+    get :index, { "sort_key" => "created_on", "sort_order" => "desc" }
     assert_response :success
     assert_not_nil assigns(:pastes)
-    assert_template "index"
-  end
-
-  def test_sort_by_description
-    get :sort_by_description
-    assert_response :success
-    assert_not_nil assigns(:pastes)
-    assert_template "index"
-  end
-
-  def test_sort_by_date
-    get :sort_by_date
-    assert_response :success
-    assert_not_nil assigns(:pastes)
+    assert_tag :tag => "img", :attributes => {:src => "/images/sort_desc.png"},  :parent => { 
+      :tag => "th", :attributes => { :title => "Sort by Date"}
+    }
+    assert_no_tag :tag => "img", :attributes => {:src => "/images/sort_desc.png"}, :parent => { 
+      :tag => "th", :attributes => { :title => "Sort by Language"}
+    }
     assert_template "index"
   end
 end
