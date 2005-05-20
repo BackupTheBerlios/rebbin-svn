@@ -17,7 +17,7 @@ class PasteControllerApiTest < Test::Unit::TestCase
 
   def test_get_languages
     result = invoke :get_languages
-    assert_equal result, PasteHelper.get_languages
+    assert_equal result, PasteHelper.get_supported_languages
   end
 
   def test_add_paste

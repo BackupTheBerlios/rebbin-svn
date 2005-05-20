@@ -64,7 +64,7 @@ class PasteController < ApplicationController
   end
 
   def get_languages
-    PasteHelper.get_languages
+    PasteHelper.get_supported_languages
   end
 
   def add_paste

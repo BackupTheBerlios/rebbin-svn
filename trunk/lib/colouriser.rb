@@ -8,6 +8,40 @@ PATH = "/usr/bin/highlight"
 ARGS = "-f -l -t 8 -S %s"
 
 module Colouriser
+  @lang_map = {
+    "Assembly" => "asm",
+    "Bash" => "sh",
+    "C" => "c",
+    "C++" => "c",
+    "C#" => "cs",
+    "CSS" => "css",
+    "Cobol" => "cob",
+    "DOS-Batch" => "bat",
+    "Haskell" => "haskell",
+    "HTML" => "xml",
+    "Java" => "java",
+    "Javascript" => "js",
+    "Latex" => "tex",
+    "Lisp" => "lisp",
+    "Make" => "make",
+    "Objective C" => "objc",
+    "PHP" => "php",
+    "Pascal" => "pas",
+    "Perl" => "pl",
+    "Plain Text" => "txt",
+    "Prolog" => "pro",
+    "Python" => "py",
+    "Ruby" => "rb",
+    "SQL" => "sql",
+    "Tcl/Tk" => "tcl",
+    "Visual Basic" => "vb",
+    "XML" => "xml",
+  }
+
+  def Colouriser.languages
+    @lang_map
+  end
+
   def Colouriser.add_line_numbers(text)
     new_text = ""
     
@@ -16,7 +50,7 @@ module Colouriser
       new_text = "%s%s\n" % [new_text, new_line]
     end
   
-    return new_text
+    new_text
   end
 
 #  def Colouriser.wordwrap(str, len)
@@ -29,17 +63,15 @@ module Colouriser
     end.join("\n")
     
     if lang == "txt"
-#      text = wordwrap(text, 79)
-      text = add_line_numbers(text)
-      return text
+      add_line_numbers(text)
+    else
+      session = Session.new
+      
+      params = ARGS % lang
+      cmd = "%s %s" % [PATH, params]
+      
+      session.execute cmd, :stdin => text
     end
-    
-    session = Session.new
-    
-    params = ARGS % lang
-    cmd = "%s %s" % [PATH, params]
-
-    session.execute cmd, :stdin => text
   end
 end
 

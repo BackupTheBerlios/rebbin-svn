@@ -14,6 +14,7 @@
         derived from this: http://wiki.rubyonrails.com/rails/show/SortHelper2
     - test/functional/archive_controller_test.rb: updated testing accordingly
     - app/models/paste.rb: additional find_by methods are no longer needed
+    - the list of supported languages must belong to the colouriser model not the helper
 
 
 19 May 05:

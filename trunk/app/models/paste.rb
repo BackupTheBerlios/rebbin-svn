@@ -9,7 +9,7 @@ class Paste < ActiveRecord::Base
 
   def html_body
     begin
-      Colouriser.colourise(body, $languages[language])
+      Colouriser.colourise(body, Colouriser.languages[language])
     rescue
       body
     end

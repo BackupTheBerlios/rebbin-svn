@@ -8,7 +8,7 @@
       <label>Language</label>
       <span>
         <select name="language" id="language">
-          <%= options_for_select PasteHelper.get_languages, "Ruby" %>
+          <%= options_for_select PasteHelper.get_supported_languages, "Ruby" %>
         </select>
       </span>
       <div class="separator"></div>
