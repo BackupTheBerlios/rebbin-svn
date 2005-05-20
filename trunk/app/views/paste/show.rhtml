@@ -9,9 +9,7 @@
     <%= link_to "next  &rarr;", { :action => "show", :id => PasteHelper.next_id(@paste[:id]) } %>
   </p>
   <p><strong><%=h @paste[:description] %></strong></p>
-  <div class="pastingText">
-    <pre><%= @paste[:body] %></pre>
-  </div>
+  <div class="pastingText"><pre><%= @paste[:body] %></pre></div>
   <br />
 </div>
 
