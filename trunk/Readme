@@ -48,3 +48,5 @@ Contains portions of
 
 session lib http://raa.ruby-lang.org/project/session/
 simple_cache http://typo.leetsoft.com/trac.cgi/file/trunk/app/models/simple_cache.rb
+sort_helper.rb http://wiki.rubyonrails.com/rails/show/SortHelper2
+scheduler.rb from John Labovitz
