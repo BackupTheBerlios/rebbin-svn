@@ -37,7 +37,7 @@
         <li><%= link_to "Add paste", { :action => "index" } %></li>
       </ul>
 
-      <% if !@pastes.nil? %>
+      <% if !@pastes.nil? && @pastes.length > 0 %>
         <span>Recent pastes:</span>
         <ul id="pastes">
           <% for paste in @pastes %>
