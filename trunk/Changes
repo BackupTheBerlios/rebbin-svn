@@ -1,4 +1,4 @@
-20 May 05:
+20 May 05 - 0.7 released:
 	- lib/scheduler.rb
 	  config/envinroment.rb:
 	  	added a scheduler that destroys pastes older than 48h, the scheduler run every 24h

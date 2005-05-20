@@ -1,7 +1,7 @@
 FEATURES
 --------
 
-Rebbin 0.x
+Rebbin 0.7
 
 	* RSS 2.0 and Atom 0.3 feeds
 	* XMLRPC and SOAP support:
@@ -13,6 +13,8 @@ Rebbin 0.x
 	* Scheduler to destroy pastes automatically, it destroys pastes
 		older than 48h and it runs every 24h in a separate thread
 	* Improved sorting in archive page
+	
+The support for text wordwrap has been removed
 
 
 Rebbin 0.6
