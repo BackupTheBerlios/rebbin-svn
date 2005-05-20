@@ -12,6 +12,7 @@
       public/images/sort_desc.png:
         removed custom sorting code in archive view and replaced with code
         derived from this: http://wiki.rubyonrails.com/rails/show/SortHelper2
+    - test/functional/archive_controller_test.rb: updated testing accordingly
 
 
 19 May 05:
