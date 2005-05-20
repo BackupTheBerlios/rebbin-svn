@@ -18,24 +18,4 @@ class Paste < ActiveRecord::Base
   def Paste.find_latest_pastes
     Paste.find(:all, :order => "created_on DESC", :limit => 20)
   end
-
-  def Paste.find_all_by_author
-    Paste.find(:all, :order => "author")
-  end
-
-  def Paste.find_all_by_language
-    Paste.find(:all, :order => "language")
-  end
-
-  def Paste.find_all_by_description
-    Paste.find(:all, :order => "description")
-  end
-
-  def Paste.find_all_by_date
-    Paste.find(:all, :order => "created_on")
-  end
-
-  def Paste.find_all
-    Paste.find(:all, :order => "created_on DESC")
-  end
 end
