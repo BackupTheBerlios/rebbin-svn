@@ -1,0 +1,24 @@
+xml.instruct!
+xml.feed "xml:lang"=>"en-us", "xmlns"=>"http://www.w3.org/2005/Atom" do
+
+  xml.title pastebin_title
+  xml.id "tag:#{@request.host},2005:Rebbin"
+  xml.link "rel" => "alternate", "type" => "text/html", "href" => url_for(:controller => "paste", :only_path => false)
+  xml.link "rel" => "self", "type" => "text/xml", "href" => url_for(:controller => "xml", :action => "atom10", :only_path => false)
+
+  xml.updated @pastes.first.created_on.xmlschema unless @pastes.empty?
+
+  for paste in @pastes
+    xml.entry do
+      xml.author { xml.name paste.author }
+      xml.id "tag:#{@request.host},2005:Rebbin-#{paste.id}"
+
+      xml.updated paste.created_on.xmlschema
+      xml.title paste_title(paste)
+  
+      xml.link "rel" => "alternate", "type" => "text/html", "href" => paste_link(paste)
+
+      xml.content paste_content(paste), "type"=>"text/html"
+    end
+  end   
+end
