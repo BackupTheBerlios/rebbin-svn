@@ -1,11 +1,15 @@
 class XmlController < ApplicationController
-  caches_page :rss, :atom
+  caches_page :rss, :atom03, :atom10
 
   def rss
     @pastes = Paste.find_latest_pastes
   end
 
-  def atom
-    @pastes = Paste.find_latest_pastes
+  def atom03
+    rss
+  end
+
+  def atom10
+    rss
   end
 end

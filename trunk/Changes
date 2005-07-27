@@ -1,6 +1,13 @@
 27 Jul 05:
 	- test/functional/paste_api_test.rb: fixed a bug in test_get_latest_pastes
 	- app/views/layouts/paste.rhtml: replaced render_partial with render :partial (see 0.13.0 release of rails)
+	- app/controllers/xml_controller.rb
+	  app/views/layouts/paste.rhtml
+	  app/views/xml/atom10.rxml
+	  app/views/xml/atom03.rxml
+	  app/views/xml/_xml.rhtml:
+	  	added support for Atom 1.0
+	
 
 20 May 05 - 0.7 released:
 	- lib/scheduler.rb
