@@ -44,7 +44,7 @@ class PasteControllerApiTest < Test::Unit::TestCase
     pastes.each_with_index { |paste, index|
       assert_equal result[index].author, paste.author.to_s
       assert_equal result[index].language, paste.language.to_s
-      assert_equal result[index].description, paste.description.to_s
+      assert_equal result[index].description, paste.description
       assert_equal result[index].body, paste.body.to_s
     }
   end
