@@ -10,5 +10,5 @@ TODO
 * multiple versions (?)
 * replace external highlighter with plain ruby code (far in the future :))
 * store html body in db (?) - cause it does mean that we tie the app to the external colouriser
-
+* add sqlite support
 
