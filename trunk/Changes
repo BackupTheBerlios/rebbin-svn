@@ -1,3 +1,6 @@
+09 Oct 05:
+	- lib/colouriser.rb: wordwrap for text-only snippets
+
 27 Jul 05:
 	- test/functional/paste_api_test.rb: fixed a bug in test_get_latest_pastes
 	- app/views/layouts/paste.rhtml: replaced render_partial with render :partial (see 0.13.0 release of rails)

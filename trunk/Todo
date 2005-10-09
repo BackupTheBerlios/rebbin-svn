@@ -1,7 +1,6 @@
 TODO
 ----
 
-* use TextHelper::wordwrap
 * check tests with mysql
 * add comments feature to pastes
 * error messages for form validation
