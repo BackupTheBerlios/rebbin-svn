@@ -1,3 +1,7 @@
+18 Nov 05:
+	- lib/colouriser.rb: updated to highlight 2.4
+	- moved FEATURES to more proper NEWS
+
 09 Oct 05:
 	- lib/colouriser.rb: wordwrap for text-only snippets
 
