@@ -17,6 +17,8 @@
       db/postgres_schema.sql
 
     - COPYING.txt: back to BSD license
+    
+    - db/mysql_schema.sql: add comments table
       
 
 18 Nov 05:
