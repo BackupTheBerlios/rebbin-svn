@@ -1,3 +1,6 @@
+19 Nov 05:
+    - app/controllers/paste_controller.rb: get rid of global in memory cache
+
 18 Nov 05:
 	- lib/colouriser.rb: updated to highlight 2.4
 	- moved FEATURES to more proper NEWS

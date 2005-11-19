@@ -10,20 +10,7 @@ class PasteController < ApplicationController
 
   def show
     @pastes = Paste.find_latest_pastes
-    paste_id = @params[:id]
-    
-    if cache[paste_id].nil?
-      @paste = Paste.find(paste_id)
-      cache[paste_id] = {
-        :id => @paste.id,
-        :author => @paste.author,
-        :language => @paste.language,
-        :description => @paste.description,
-        :body => @paste.html_body, 
-        :created_on => @paste.created_on
-      }
-    end
-    @paste = cache[paste_id]
+    @paste = Paste.find(@params[:id])
   end
 
   def create

@@ -6,6 +6,7 @@ Rebbin x.x
 	* Atom 1.0 feed
 	* Wordwrap for text-only snippets
 	* Now wants Highlight 2.4
+    * Get rid of global in-memory cache and use Rails caching system
 
 Rebbin 0.7
 
