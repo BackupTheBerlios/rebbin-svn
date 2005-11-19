@@ -5,7 +5,7 @@ require 'session'
 
 # customize PATH to make it work under another platform
 PATH = "/usr/bin/highlight"
-ARGS = "-f -l -t 8 -S %s"
+ARGS = "-f -l -m 1 -t 8 -S %s"
 
 module Colouriser
   @lang_map = {
