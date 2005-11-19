@@ -15,12 +15,16 @@
       app/views/comment/_create.rhtml
       app/views/paste/show.rhtml
       db/postgres_schema.sql
+        basic comment support for each paste
 
     - COPYING.txt: back to BSD license
     
     - db/mysql_schema.sql: add comments table
-      
 
+    - app/models/comment.rb
+      test/unit/comment_test.rb:
+        validates email and uri
+      
 18 Nov 05:
 	- lib/colouriser.rb: updated to highlight 2.4
 	- moved FEATURES to more proper NEWS
