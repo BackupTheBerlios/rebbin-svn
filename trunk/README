@@ -10,7 +10,7 @@ Requirements
 Ruby 1.8 (developed on ruby 1.8.2 (2004-12-23) [i386-linux])
 Rails 0.12.1 (developed on rails 0.12.1)
 PostgreSQL 7.4 or Mysql 4 (developed on PostgreSQL 7.4.7)
-Highlight 2.2-10 for utf-8 support (developed on Highlight 2.2-10)
+Highlight 2.4
 
 Features
 --------
