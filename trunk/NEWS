@@ -1,5 +1,5 @@
-FEATURES
---------
+NEWS
+----
 
 Rebbin x.x
 	
@@ -8,6 +8,7 @@ Rebbin x.x
 	* Now wants Highlight 2.4
     * Get rid of global in-memory cache and use Rails caching system
     * Basic comment support for each paste
+    * Now is BSD Licensed
 
 Rebbin 0.7
 

@@ -14,7 +14,9 @@
       app/controllers/comment_controller.rb
       app/views/comment/_create.rhtml
       app/views/paste/show.rhtml
-      db/postgres_schema.sql  
+      db/postgres_schema.sql
+
+    - COPYING.txt: back to BSD license
       
 
 18 Nov 05:
