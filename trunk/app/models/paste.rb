@@ -1,4 +1,7 @@
 class Paste < ActiveRecord::Base
+  has_many :comments
+  before_destroy :delete_comments
+
   validates_presence_of :author
   validates_presence_of :language
   validates_presence_of :body
@@ -17,5 +20,13 @@ class Paste < ActiveRecord::Base
   
   def Paste.find_latest_pastes
     Paste.find(:all, :order => "created_on DESC", :limit => 20)
+  end
+
+  private
+  def delete_comments
+    begin
+      Paste.comments.destroy_all "paste_id = #{id}"
+    rescue NoMethodError
+    end
   end
 end

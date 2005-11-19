@@ -4,8 +4,6 @@ TODO
 * check tests with mysql
 * add sqlite support
 
-* add comments feature to pastes
-
 * error messages for form validation
 * admin ui (list, edit, delete) (?)
 

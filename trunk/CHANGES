@@ -1,5 +1,21 @@
 19 Nov 05:
-    - app/controllers/paste_controller.rb: get rid of global in memory cache
+    - app/controllers/paste_controller.rb
+      app/model/never_expire_cache.rb
+      app/controllers/application.rb
+        get rid of global in memory cache
+
+    - test/unit/paste_test.rb: remove useless test
+    - test/unit/comment_test.rb
+      test/functional/comment_controller.rb
+      test/fixtures/comments.yml
+      app/helpers/comment_helper.rb
+      app/models/comment.rb
+      app/models/paste.rb
+      app/controllers/comment_controller.rb
+      app/views/comment/_create.rhtml
+      app/views/paste/show.rhtml
+      db/postgres_schema.sql  
+      
 
 18 Nov 05:
 	- lib/colouriser.rb: updated to highlight 2.4

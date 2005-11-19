@@ -13,3 +13,14 @@
   <br />
 </div>
 
+<div id="comments">
+  <span>Comments:</span>
+  <ol>
+    <% for comment in @paste.comments %>
+    <li><div class="pastingText"><pre><%= comment.body %></pre></div></li>
+    <%= "Comment by %s on #{comment.created_on}" % CGI.escapeHTML(comment.author) %>
+    <p></p>
+    <% end %>
+  </ol>
+ <%= render :partial => "comment/create" %>
+</div>

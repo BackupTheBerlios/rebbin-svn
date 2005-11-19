@@ -1,0 +1,21 @@
+<div>
+  <form action="/comment/create" method="post">
+    <fieldset class="form">
+      <legend>Add comment</legend>
+      <label>Author</label>
+      <span><%= text_field_tag "comment_author", "", :size => 30 %></span>
+      <div class="separator"></div>
+      <label>Email (optional)</label>
+      <span><%= text_field_tag "email", "", :size => 40 %></span>
+      <div class="separator"></div>
+      <label><acronym title="Uniform Resource Identifier">URI</acronym> (optional)</label>
+      <span><%= text_field_tag "uri", "", :size => 70 %></span>
+      <div class="separator"></div>
+      <label>Body</label>
+      <span><%= text_area_tag "body", "", :rows => 20, :cols => 80 %></span>
+      <div class="separator"></div>
+      <span><input type="submit" value="Add Comment" /></span>
+      <span><%= hidden_field_tag "paste_id", @paste[:id] %></span>
+    </fieldset>
+  </form>
+</div>

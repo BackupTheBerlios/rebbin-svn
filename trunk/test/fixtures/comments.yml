@@ -1,0 +1,7 @@
+comment1:
+    id: 1
+    author: rhymes
+    email: rhymes@foo.baz
+    uri: http://www.google.it
+    body: sample comment
+    created_on: <%= Time.now %>
