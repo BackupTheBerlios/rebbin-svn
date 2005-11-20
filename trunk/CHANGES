@@ -1,7 +1,13 @@
-20 Nov 05:
+20 Nov 05 - 0.8 released:
     - app/controllers/paste_controller.rb
       app/controllers/archive_controller.rb
         caching support
+
+    - app/models/never_expire_cache.rb
+      app/controllers/paste_controller.rb
+      app/controllers/application.rb
+      app/views/paste/show.rhtml
+        custom cache for colourised snippets
       
 
 19 Nov 05:

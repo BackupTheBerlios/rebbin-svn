@@ -1,15 +1,13 @@
 NEWS
 ----
 
-Rebbin x.x
+Rebbin 0.8
 	
 	* Atom 1.0 feed
 	* Wordwrap for text-only snippets
 	* Now wants Highlight 2.4
-    * Get rid of global in-memory cache and use Rails caching system
+    * Use Rails caching system and custom caching for colourised snippets
     * Basic comment support for each paste
-    * Caching support for pages/actions
-    * Restore global in memory cache to cache html computed body
     * Now is BSD Licensed
 
 Rebbin 0.7
