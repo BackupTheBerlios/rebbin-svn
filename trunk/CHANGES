@@ -1,3 +1,9 @@
+20 Nov 05:
+    - app/controllers/paste_controller.rb
+      app/controllers/archive_controller.rb
+        caching support
+      
+
 19 Nov 05:
     - app/controllers/paste_controller.rb
       app/model/never_expire_cache.rb

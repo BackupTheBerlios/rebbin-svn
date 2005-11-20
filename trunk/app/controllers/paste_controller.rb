@@ -2,6 +2,7 @@ $AUTHOR_COOKIE_NAME = "_rebbin_paste_author"
 
 class PasteController < ApplicationController
   helper :paste
+  caches_page :download
 
   def index
     @author_cookie_val = cookies[$AUTHOR_COOKIE_NAME]
@@ -27,6 +28,7 @@ class PasteController < ApplicationController
       end
 
       if @paste.save
+        expire_page :controller => "archive", :action => "index"
         redirect_to :action => "show", :id => @paste.id
       else
         redirect_to :action => "index"
