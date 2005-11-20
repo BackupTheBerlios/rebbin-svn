@@ -1,0 +1,11 @@
+development:
+  adapter: sqlite3
+  dbfile: db/rebbin.db
+
+test:
+  adapter: sqlite3
+  dbfile: db/rebbin_test.db
+
+production:
+  adapter: sqlite3
+  dbfile: db/rebbin_production.db

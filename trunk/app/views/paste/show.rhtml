@@ -2,7 +2,7 @@
   <p>
     <%= link_to "&larr; prev", { :action => "show", :id => PasteHelper.prev_id(@paste[:id]) } %>
     &nbsp;&bull;
-    Pasted by <%=h "#{@paste[:author]} in #{@paste[:language]} at #{@paste[:created_on].getutc}" %>
+    Pasted by <%=h "#{@paste[:author]} in #{@paste[:language]} at #{@paste.created_on.getutc}" %>
     &nbsp;&bull;&nbsp;
     <%= link_to "download", { :action => "download", :id => @paste[:id] } %>
     &nbsp;&bull;&nbsp;

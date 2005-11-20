@@ -1,3 +1,9 @@
+20 Nov 0.5:
+    - db/sqlite3_schema.sql
+      config/database.yml.sqlite3
+        add sqlite3 support
+      
+
 20 Nov 05 - 0.8 released:
     - app/controllers/paste_controller.rb
       app/controllers/archive_controller.rb

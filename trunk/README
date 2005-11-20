@@ -9,7 +9,7 @@ Requirements
 
 Ruby 1.8 (developed on ruby 1.8.2 (2004-12-23) [i386-linux])
 Rails 0.12.1 (developed on rails 0.12.1)
-PostgreSQL 7.4 or Mysql 4 (developed on PostgreSQL 7.4.7)
+PostgreSQL 7.4 or Mysql 4 or SQLite3 (developed on PostgreSQL 7.4.7)
 Highlight 2.4
 
 Features
@@ -41,11 +41,13 @@ Ruby http://www.ruby-lang.org
 Rails http://www.rubyonrails.com
 PostgreSQL http://www.postgresql.org
 Mysql http://www.mysql.com
+SQLite 3 http://www.sqlite.org
 Highlight http://www.andre-simon.de/doku/highlight/highlight_en.html
 
 Contains portions of
 --------------------
 
+simple_cache.rb http://typo.leetsoft.com/trac.cgi/file/trunk/app/models/simple_cache.rb
 session lib http://raa.ruby-lang.org/project/session/
 sort_helper.rb http://wiki.rubyonrails.com/rails/show/SortHelper2
 scheduler.rb from John Labovitz
