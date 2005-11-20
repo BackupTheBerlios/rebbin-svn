@@ -11,6 +11,49 @@
       test/unit/paste_test.rb
       test/test_helper.rb
         modified to prepare Rails 0.13.1 to 1.0 upgrade
+
+    - test/unit/comment_test.rb
+      test/test_helper.rb
+      app/models/comment.rb
+      app/controllers/application.rb
+      Rakefile
+      vendor/plugins
+      script/performance
+      script/performance/benchmarker
+      script/performance/profiler
+      script/console
+      script/breakpointer
+      script/server
+      script/destroy
+      script/runner
+      script/generate
+      script/about
+      script/plugin
+      script/process
+      script/process/spawner
+      script/process/spinner
+      script/process/reaper
+      config/lighttpd.conf
+      config/database.yml
+      config/boot.rb
+      config/environment.rb
+      config/environments/test.rb
+      config/environments/development.rb
+      config/environments/production.rb
+      lib/tasks
+      public/dispatch.fcgi
+      public/robots.txt
+      public/500.html
+      public/javascripts/prototype.js
+      public/javascripts/effects.js
+      public/javascripts/dragdrop.js
+      public/javascripts/controls.js
+      public/404.html
+      public/index.html
+      public/.htaccess
+
+        NOW RUNS ON Rails 0.14.3
+
       
 
 20 Nov 05 - 0.8 released:

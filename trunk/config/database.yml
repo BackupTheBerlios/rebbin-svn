@@ -1,9 +1,16 @@
+# PostgreSQL versions 7.4 - 8.1
+#
+# Get the C bindings:
+#   gem install postgres
+# or use the pure-Ruby bindings on Windows:
+#   gem install postgres-pr
 development:
   adapter: postgresql
   database: rebbin
-  host: localhost
   username: root
-  password: 
+  password:
+  host: localhost
+  encoding: UTF8
 
 test:
   adapter: postgresql
@@ -17,4 +24,53 @@ production:
   database: rebbin_production
   host: localhost
   username: root
+  password:
+
+# MySQL (default setup).  Versions 4.1 and 5.0 are recommended.
+#
+# Get the fast C bindings:
+#   gem install mysql
+#   (on OS X: gem install mysql -- --include=/usr/local/lib)
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+mysql_development:
+  adapter: mysql
+  database: rebbin
+  username: root
+  password:
+  host: localhost
+  
+mysql_test:
+  adapter: mysql
+  database: rebbin_test
+  username: root
+  host: localhost
+  password:
+
+mysql_production:
+  adapter: mysql
+  database: rebbin_production
+  host: localhost
+  username: root
   password: 
+
+# SQLite version 3.x
+#   gem install sqlite3-ruby
+sqlite3_development:
+  adapter: sqlite3
+  database: db/rebbin.db
+
+sqlite3_test:
+  adapter: sqlite3
+  database: ":memory:"
+
+sqlite3_production:
+  adapter: sqlite3
+  database: db/rebbin_production.db
+
+
+# SQLite version 2.x
+#   gem install sqlite-ruby
+#sqlite_example:
+#  adapter: sqlite
+#  database: db/development.sqlite2

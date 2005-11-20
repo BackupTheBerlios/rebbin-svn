@@ -4,6 +4,7 @@ NEWS
 Rebbin x.x
     * SQLite 3 support
     * lighttpd support
+    * Requires Rails 0.14.3
 
 Rebbin 0.8
 	

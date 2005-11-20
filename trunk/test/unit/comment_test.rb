@@ -53,42 +53,4 @@ class CommentTest < Test::Unit::TestCase
     assert temp2.destroy
     assert temp.destroy
   end
-
-  def test_check_email
-    @comment.uri = nil
-
-    @comment.email = "alfa"
-    assert !@comment.save
-
-    @comment.email = "foo@b"
-    assert !@comment.save
-
-    @comment.email = "foo@bar.baz"
-    assert @comment.save
-
-    @comment.email = ""
-    assert !@comment.save
-
-    @comment.email = nil
-    assert @comment.save
-  end
-
-  def test_check_uri
-    @comment.email = nil
-
-    @comment.uri = "http://alfa"
-    assert !@comment.save
-
-    @comment.uri = "www.pippo.it"
-    assert !@comment.save
-
-    @comment.uri = "http://www.pippo.it"
-    assert @comment.save
-
-    @comment.uri = ""
-    assert !@comment.save
-
-    @comment.uri = nil
-    assert @comment.save
-  end
 end
