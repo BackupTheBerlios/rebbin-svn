@@ -1,12 +1,18 @@
+
 TODO
 ----
 
-* check tests with mysql
 * add sqlite support
+
+* add ajax support for comments
 
 * error messages for form validation
 * admin ui (list, edit, delete) (?)
 
+__ far in the future __
+
 * replace external highlighter with plain ruby code (far in the future :))
 * rework theme
+* check tests with mysql
 
+__

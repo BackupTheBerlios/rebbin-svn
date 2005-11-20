@@ -11,7 +11,16 @@ class PasteController < ApplicationController
 
   def show
     @pastes = Paste.find_latest_pastes
-    @paste = Paste.find(@params[:id])
+
+    paste_id = @params[:id]
+
+    @paste = Paste.find(paste_id)
+
+    if cache[paste_id].nil?
+      cache[paste_id] = @paste.html_body
+    end
+    
+    @paste.body = cache[paste_id]
   end
 
   def create
