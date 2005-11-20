@@ -13,3 +13,8 @@ def create_fixtures(*table_names)
 end
 
 Test::Unit::TestCase.fixture_path = File.dirname(__FILE__) + "/fixtures/"
+
+class Test::Unit::TestCase
+  self.use_instantiated_fixtures = false
+  self.use_transactional_fixtures = true
+end

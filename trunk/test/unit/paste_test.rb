@@ -61,7 +61,7 @@ class PasteTest < Test::Unit::TestCase
   end
 
   def test_body_unicode
-    assert_equal @unicode["body"], "Iñtërnâtiônàlizætiøn"
+    assert_equal pastes(:unicode)["body"], "Iñtërnâtiônàlizætiøn"
   end
 
   def test_crud

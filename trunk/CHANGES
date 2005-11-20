@@ -6,6 +6,11 @@
     - script/lighttpd
       config/lighttpd.conf
         lighttpd support
+
+    - test/unit/comment_test.rb
+      test/unit/paste_test.rb
+      test/test_helper.rb
+        modified to prepare Rails 0.13.1 to 1.0 upgrade
       
 
 20 Nov 05 - 0.8 released:

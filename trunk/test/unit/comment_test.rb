@@ -25,14 +25,6 @@ class CommentTest < Test::Unit::TestCase
     assert !@comment.valid?
   end
 
-  def test_paste_id
-    @comment.paste_id = 999
-    assert_raise(ActiveRecord::StatementInvalid) { @comment.save }
-
-    @comment.paste_id = 1
-    assert @comment.save
-  end
-
   def test_body
     @comment.body = nil
     assert !@comment.valid?
