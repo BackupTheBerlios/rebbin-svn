@@ -2,8 +2,6 @@
 TODO
 ----
 
-* add sqlite support
-
 * add ajax support for comments
 
 * error messages for form validation
