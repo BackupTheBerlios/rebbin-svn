@@ -12,10 +12,14 @@ Rails 0.12.1 (developed on rails 0.12.1)
 PostgreSQL 7.4 or Mysql 4 or SQLite3 (developed on PostgreSQL 7.4.7)
 Highlight 2.4
 
+Apache 2 (developed on Apache 2.0.54)
+ - or -
+lighttpd 1.4.7 (visit http://blog.x180.net/2005/06/rails_on_lightt.html to see how to install it)
+
 Features
 --------
 
-see Features
+see NEWS
 
 License
 -------
@@ -43,6 +47,8 @@ PostgreSQL http://www.postgresql.org
 Mysql http://www.mysql.com
 SQLite 3 http://www.sqlite.org
 Highlight http://www.andre-simon.de/doku/highlight/highlight_en.html
+Apache http://httpd.apache.org
+lighttpd http://www.lighttpd.org
 
 Contains portions of
 --------------------
