@@ -1,6 +1,5 @@
 class Comment < ActiveRecord::Base
   belongs_to :paste
-  before_save :check_email_uri
 
   validates_presence_of :paste_id
   validates_presence_of :author
