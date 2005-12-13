@@ -3,6 +3,7 @@ $AUTHOR_COOKIE_NAME = "_rebbin_paste_author"
 class PasteController < ApplicationController
   helper :paste
   caches_page :download
+  session :off
 
   def index
     @author_cookie_val = cookies[$AUTHOR_COOKIE_NAME]

@@ -1,4 +1,6 @@
 class CommentController < ApplicationController
+  session :off
+
   def create
     begin
       @comment = Comment.new 

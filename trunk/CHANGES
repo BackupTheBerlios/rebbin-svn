@@ -1,3 +1,11 @@
+13 Dec 05:
+	- upgraded to rails 0.14.4
+	
+	- app/controllers/paste_controller.rb
+	  app/controllers/xml_controller.rb
+	  app/controllers/comment_controller.rb
+	  	turned off unneeded sessions
+
 20 Nov 0.5:
     - db/sqlite3_schema.sql
       config/database.yml.sqlite3
