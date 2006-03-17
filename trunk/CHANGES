@@ -1,5 +1,9 @@
 17 Mar 06 - 0.9 released:
-	- release
+	- app/controllers/xml_controller.rb
+	  app/views/layouts/paste.rhtml
+	  app/views/xml/atom.rxml
+	  app/views/xml/_xml.rhtml
+		get rid of atom 0.3 support. it's deprecated
 
 13 Dec 05:
 	- upgraded to rails 0.14.4
