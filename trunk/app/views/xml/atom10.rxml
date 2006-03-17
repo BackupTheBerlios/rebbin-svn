@@ -4,7 +4,7 @@ xml.feed "xml:lang"=>"en-us", "xmlns"=>"http://www.w3.org/2005/Atom" do
   xml.title pastebin_title
   xml.id "tag:#{@request.host},2005:Rebbin"
   xml.link "rel" => "alternate", "type" => "text/html", "href" => url_for(:controller => "paste", :only_path => false)
-  xml.link "rel" => "self", "type" => "text/xml", "href" => url_for(:controller => "xml", :action => "atom10", :only_path => false)
+  xml.link "rel" => "self", "type" => "text/xml", "href" => url_for(:controller => "xml", :action => "atom", :only_path => false)
 
   xml.updated @pastes.first.created_on.xmlschema unless @pastes.empty?
 
