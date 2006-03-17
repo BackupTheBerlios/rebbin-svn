@@ -4,6 +4,7 @@ NEWS
 Rebbin 0.9
     * SQLite 3 support
     * Requires Rails 1.0
+    * Atom 0.3 feed dropped
 
 Rebbin 0.8
 	
