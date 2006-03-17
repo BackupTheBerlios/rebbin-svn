@@ -1,7 +1,7 @@
 NEWS
 ----
 
-Rebbin x.x
+Rebbin 0.9
     * SQLite 3 support
     * Requires Rails 1.0
 
